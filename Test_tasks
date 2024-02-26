@@ -1,0 +1,29 @@
+# Program to compute the sum of integers in a list provided by the user
+numbers = input("Enter Numbers separated by space\n").split()  # Accept user input and split into list
+numbers = [int(num) for num in  numbers]  # Convert input strings to integers
+total = sum(numbers)  # Compute the sum of integers
+print("Total sum:", total)  # Print the total sum
+
+# Create a tuple containing the names of five favorite books and print each book name on a separate line
+fav_books = ("The Pride land", "Peason Specter 12", "the Mockingbird", "The Catcher in the Rye", "Harry Potter and the Sorcerer's Stone")
+for book in fav_books:  # Iterate through the tuple
+    print(book)  # Print each book name
+
+# Program to store information about a person using a dictionary, ask for user input, and print the dictionary
+person_info = {}  # Create an empty dictionary to store information about the person
+person_info['name'] = input("What's Your name: ")  # Ask for user's name and store in the dictionary
+person_info['age'] = input("Your age: ")  # Ask for user's age and store in the dictionary
+person_info['favorite_color'] = input("Favorite color: ")  # Ask for user's favorite color and store in the dictionary
+for key, value in person_info.items():  # Iterate through the dictionary items
+    print("{}: {}".format(key, value))  # Print key-value pairs
+
+# Program to create two sets of integers provided by the user and create a new set containing common elements
+set1 = set(map(int, input("Enter integers for the first set separated by spaces: ").split()))  # Accept user input for the first set
+set2 = set(map(int, input("Enter integers for the second set separated by spaces: ").split()))  # Accept user input for the second set
+common_elements = set1.intersection(set2)  # Find common elements between sets
+print("Common elements:", common_elements)  # Print common elements
+
+# Program to store a list of words and create a new list containing only words with odd number of characters
+words = ["apple", "banana", "orange", "pear", "kiwi", "grape"]  # List of words
+odd_length_words = [word for word in words if len(word) % 2 != 0]  # List comprehension to filter words with odd length
+print("Words with odd number of characters:", odd_length_words)  # Print words with odd length
